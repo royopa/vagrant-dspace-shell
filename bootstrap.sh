@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
 apt-get update
-apt-get install -y language-pack-en software-properties-common python-software-properties wget git unzip linux-headers-generic build-essential dkms
+apt-get install -y wget git unzip
 
 wget https://github.com/royopa/dspace-auto-install/archive/dspace-4.2.zip
 unzip dspace-4.2.zip 
