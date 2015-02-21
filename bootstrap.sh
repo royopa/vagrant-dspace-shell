@@ -1,13 +1,10 @@
 #!/usr/bin/env bash
 
-apt-get install -y wget git unzip
+apt-get install -y git
 
-sudo rm -rf dspace-4.2*.zip
-sudo rm -rf dspace-auto-install*
+sudo rm -rf dspace-auto-install
 sudo rm -rf /dspace
 
-wget https://github.com/royopa/dspace-auto-install/archive/dspace-4.2.zip
-unzip dspace-4.2.zip 
-
-cd dspace-auto-install-dspace-4.2
+git clone -b dspace-4.2 https://github.com/royopa/dspace-auto-install.git dspace-auto-install
+cd dspace-auto-install
 ./build-dspace
