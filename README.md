@@ -10,6 +10,7 @@ Requirements
 
 * [Vagrant](http://vagrantup.com/) version 1.3.2 or higher
 * [VirtualBox](https://www.virtualbox.org/)
+  sudo apt get install nfs-kernel-server rpcbind
 
 Getting Started
 ---------------
