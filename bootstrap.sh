@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
 sudo apt-get update
-sudo apt-get install -y git
+sudo apt-get install -y git openjdk-7-jdk maven ant ant-optional tomcat7 postgresql tomcat7-admin
 
 sudo rm -rf dspace-auto-install
 sudo rm -rf /dspace
