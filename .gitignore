@@ -9,7 +9,7 @@
 /dspace/*
 !/dspace/readme.md
 
-# Ignore "dspace/" subfolder, except for the README
+# Ignore "dspace-src/" subfolder, except for the README
 /dspace-src/*
 !/dspace-src/readme.md
 
