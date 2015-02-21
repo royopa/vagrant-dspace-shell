@@ -1,10 +1,10 @@
 #!/usr/bin/env bash
 
-apt-get update
-apt-get install -y language-pack-en software-properties-common python-software-properties wget git unzip linux-headers-generic build-essential dkms
+apt-get install -y git
 
-wget https://github.com/royopa/dspace-auto-install/archive/dspace-5.x.zip
-unzip dspace-5.x.zip
+sudo rm -rf dspace-auto-install
+sudo rm -rf /dspace
 
-cd dspace-auto-install-dspace-5.x
+git clone -b dspace-5.x https://github.com/royopa/dspace-auto-install.git
+cd dspace-auto-install
 ./build-dspace

@@ -28,7 +28,9 @@ Vagrant.configure(2) do |config|
   # the path on the guest to mount the folder. And the optional third
   # argument is a set of non-required options.
   # config.vm.synced_folder "../data", "/vagrant_data"
-
+  config.vm.synced_folder "dspace", "/dspace"
+  config.vm.synced_folder "dspace-src", "/home/vagrant/dspace-auto-install/dspace-src"
+  
   # Provider-specific configuration so you can fine-tune various
   # backing providers for Vagrant. These expose provider-specific options.
   # Example for VirtualBox:
@@ -39,6 +41,25 @@ Vagrant.configure(2) do |config|
 
      # Customize the amount of memory on the VM:
      vb.memory = "2048"
+  end
+
+  if Vagrant.has_plugin?("vagrant-cachier")
+    # Configure cached packages to be shared between instances of the same base box.
+    # More info on http://fgrehm.viewdocs.io/vagrant-cachier/usage
+    config.cache.scope = :box
+
+    # OPTIONAL: If you are using VirtualBox, you might want to use that to enable
+    # NFS for shared folders. This is also very useful for vagrant-libvirt if you
+    # want bi-directional sync
+    config.cache.synced_folder_opts = {
+      type: :nfs,
+      # The nolock option can be useful for an NFSv3 client that wants to avoid the
+      # NLM sideband protocol. Without this option, apt-get might hang if it tries
+      # to lock files needed for /var/cache/* operations. All of this can be avoided
+      # by using NFSv4 everywhere. Please note that the tcp option is not the default.
+      mount_options: ['rw', 'vers=3', 'tcp', 'nolock']
+    }
+    # For more information please check http://docs.vagrantup.com/v2/synced-folders/basic_usage.html
   end
 
   # Enable provisioning with a shell script
