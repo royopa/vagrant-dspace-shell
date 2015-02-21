@@ -7,8 +7,6 @@ sudo add-apt-repository "deb http://ppa.launchpad.net/natecarlson/maven3/ubuntu 
 sudo apt-get update
 sudo apt-get install -y maven3
 
-wget https://github.com/royopa/dspace-auto-install/archive/master.zip
-sudo unzip master.zip
-
-cd dspace-auto-install-master
+git clone -b dspace-5.x https://github.com/royopa/dspace-auto-install.git
+cd dspace-auto-install
 ./build-dspace
