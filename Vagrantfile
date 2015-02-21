@@ -28,7 +28,7 @@ Vagrant.configure(2) do |config|
   # the path on the guest to mount the folder. And the optional third
   # argument is a set of non-required options.
   config.vm.synced_folder "dspace", "/dspace"
-  #config.vm.synced_folder "dspace-src", "/home/vagrant/dspace-auto-install-master/dspace-src"
+  config.vm.synced_folder "dspace-src", "/dspace-src"
 
   # Provider-specific configuration so you can fine-tune various
   # backing providers for Vagrant. These expose provider-specific options.
