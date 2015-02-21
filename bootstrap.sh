@@ -1,6 +1,7 @@
 #!/usr/bin/env bash
 
-apt-get install -y git
+sudo apt-get update
+sudo apt-get install -y git
 
 sudo rm -rf dspace-auto-install
 sudo rm -rf /dspace
