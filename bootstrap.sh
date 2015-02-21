@@ -12,4 +12,4 @@ sudo rm -rf dspace-auto-install
 
 git clone -b dspace-5.x https://github.com/royopa/dspace-auto-install.git
 cd dspace-auto-install
-#./build-dspace
+./build-dspace
