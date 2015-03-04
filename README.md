@@ -17,16 +17,20 @@ Getting Started
 1. Install all required software (see above). Linux users take note: the versions of Vagrant and Virtualbox in your distribution's package manager are probably not current enough. Download and manually install the most recent version from [Vagrant](http://vagrantup.com) and [VirtualBox](https://www.virtualbox.org/). It will be OK. Both of these projects move quickly, and the distro managers have a hard time keeping up.
 
 2. Clone a copy of 'vagrant-dspace' to your local computer
-   * `git clone git@github.com:DSpace/vagrant-dspace.git`
+   * `git clone git@github.com:royopa/vagrant-dspace-shell.git`
 
-3. `cd [vagrant-dspace]/`
+3. `cd [vagrant-dspace-shell]/`
 
-4. `vagrant up`
+4. `mkdir dspace`
+
+5. `mkdir dspace-src`
+
+6. `vagrant up`
    * Wait for ~15 minutes while Vagrant & Puppet do all the heavy lifting of cloning GitHub & building & installing DSpace.
    * There may be times that vagrant will appear to "stall" for several minutes (especially during the Maven build of DSpace). But, don't worry.
 
-5. Once complete, visit `http://localhost:8080/xmlui/` or `http://localhost:8080/jspui/` in your local web browser to see if it worked! _More info below on what to expect._
-   * If you already have something running locally on port 8080, vagrant-dspace will attempt to use the next available port between 8081 and 8100.
+7. Once complete, visit `http://localhost:8081/xmlui/` or `http://localhost:8081/jspui/` in your local web browser to see if it worked! _More info below on what to expect._
+   * If you already have something running locally on port 8081, vagrant-dspace will attempt to use the next available port between 8081 and 8100.
 
 The `vagrant up` command will initialize a new VM based on the settings in the `Vagrantfile` in that directory.
 
@@ -41,9 +45,9 @@ What will you get?
    * You can visit this instance at `http://localhost:8080/xmlui/` or `http://localhost:8080/jspui/` from your local web browser
 
    * An initial Administrator account is also auto-created:
-       * Login: `dspace` , Pwd: 'dspace'
+       * Login: `dspace` , Pwd: `dspace`
 
-* A fresh Ubuntu virtual server with DSpace GitHub cloned (at `~/dspace-src/`) and Java/Maven/Ant/Git installed.
+* A fresh Ubuntu virtual server with DSpace GitHub cloned (at `/dspace-src/`) and Java/Maven/Ant/Git installed.
 
 * All "out of the box" DSpace webapps running out of `/dspace/webapps/`. The full DSpace installation is at `/dspace/`.
 
