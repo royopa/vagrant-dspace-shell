@@ -21,15 +21,11 @@ Getting Started
 
 3. `cd [vagrant-dspace-shell]/`
 
-4. `mkdir dspace`
-
-5. `mkdir dspace-src`
-
-6. `vagrant up`
+4. `vagrant up`
    * Wait for ~15 minutes while Vagrant & Puppet do all the heavy lifting of cloning GitHub & building & installing DSpace.
    * There may be times that vagrant will appear to "stall" for several minutes (especially during the Maven build of DSpace). But, don't worry.
 
-7. Once complete, visit `http://localhost:8081/xmlui/` or `http://localhost:8081/jspui/` in your local web browser to see if it worked! _More info below on what to expect._
+5. Once complete, visit `http://localhost:8081/xmlui/` or `http://localhost:8081/jspui/` in your local web browser to see if it worked! _More info below on what to expect._
    * If you already have something running locally on port 8081, vagrant-dspace will attempt to use the next available port between 8081 and 8100.
 
 The `vagrant up` command will initialize a new VM based on the settings in the `Vagrantfile` in that directory.
